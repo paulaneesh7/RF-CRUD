@@ -134,7 +134,7 @@ const CreateUserModal = ({ setUsers }) => {
               px={4}
               py={2}
             >
-              Create User
+              Create Friend
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>

@@ -102,7 +102,14 @@ function EditModal({ user, setUsers }) {
         <ModalOverlay />
         <form onSubmit={handleEditUser}>
           <ModalContent>
-            <ModalHeader>Edit Friend</ModalHeader>
+            <ModalHeader
+              color={useColorModeValue("gray.900", "whiteAlpha.900")}
+              borderRadius="md"
+              px={4}
+              py={2}
+            >
+              Edit Friend
+            </ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
               <Flex alignItems={"center"} gap={4}>
@@ -117,6 +124,7 @@ function EditModal({ user, setUsers }) {
                     placeholder="John Doe"
                     value={name} // Use state
                     onChange={(e) => setName(e.target.value)}
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
                   />
                 </FormControl>
 
@@ -131,6 +139,7 @@ function EditModal({ user, setUsers }) {
                     placeholder="Software Engineer"
                     value={role} // Use state
                     onChange={(e) => setRole(e.target.value)}
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
                   />
                 </FormControl>
               </Flex>
@@ -147,6 +156,7 @@ function EditModal({ user, setUsers }) {
                   placeholder="He's a software engineer who loves to code and build things."
                   value={description} // Use state
                   onChange={(e) => setDescription(e.target.value)}
+                  color={useColorModeValue("gray.900", "whiteAlpha.900")}
                 />
               </FormControl>
             </ModalBody>
