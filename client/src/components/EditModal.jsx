@@ -14,6 +14,8 @@ import {
   ModalOverlay,
   Textarea,
   useDisclosure,
+  useColorMode,
+  useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -105,7 +107,12 @@ function EditModal({ user, setUsers }) {
             <ModalBody pb={6}>
               <Flex alignItems={"center"} gap={4}>
                 <FormControl>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
+                  >
+                    Full Name
+                  </FormLabel>
+
                   <Input
                     placeholder="John Doe"
                     value={name} // Use state
@@ -114,7 +121,12 @@ function EditModal({ user, setUsers }) {
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Role</FormLabel>
+                  <FormLabel
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
+                  >
+                    Role
+                  </FormLabel>
+
                   <Input
                     placeholder="Software Engineer"
                     value={role} // Use state
@@ -123,7 +135,12 @@ function EditModal({ user, setUsers }) {
                 </FormControl>
               </Flex>
               <FormControl mt={4}>
-                <FormLabel>Description</FormLabel>
+                <FormLabel
+                  color={useColorModeValue("gray.900", "whiteAlpha.900")}
+                >
+                  Description
+                </FormLabel>
+
                 <Textarea
                   resize={"none"}
                   overflowY={"hidden"}

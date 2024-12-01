@@ -6,6 +6,7 @@ import {
   Input,
   Radio,
   RadioGroup,
+  Text,
   Textarea,
   useColorMode,
   useColorModeValue,
@@ -139,34 +140,50 @@ const CreateUserModal = ({ setUsers }) => {
             <ModalBody pb={6}>
               <Flex alignItems={"center"} gap={4}>
                 <FormControl>
-                  <FormLabel color={useColorModeValue("bg.white", "bg.black")}>
+                  <FormLabel
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
+                  >
                     Full Name
                   </FormLabel>
+
                   <Input
                     placeholder="John Doe"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
                   />
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Role</FormLabel>
+                  <FormLabel
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
+                  >
+                    Role
+                  </FormLabel>
+
                   <Input
                     placeholder="SoftwareEngineer"
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
+                    color={useColorModeValue("gray.900", "whiteAlpha.900")}
                   />
                 </FormControl>
               </Flex>
 
               <FormControl mt={4}>
-                <FormLabel>Description</FormLabel>
+                <FormLabel
+                  color={useColorModeValue("gray.900", "whiteAlpha.900")}
+                >
+                  Description
+                </FormLabel>
+
                 <Textarea
                   resize={"none"}
                   overflowY={"hidden"}
                   placeholder="He's a software engineer who loves to code and build things."
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
+                  color={useColorModeValue("gray.900", "whiteAlpha.900")}
                 />
               </FormControl>
 
@@ -176,8 +193,12 @@ const CreateUserModal = ({ setUsers }) => {
                 onChange={(value) => setGender(value)}
               >
                 <Flex gap={4}>
-                  <Radio value="Male">Male</Radio>
-                  <Radio value="Female">Female</Radio>
+                  <Radio value="Male">
+                    <Text color={useColorModeValue("gray.900", "whiteAlpha.900")}>Male</Text>
+                  </Radio>
+                  <Radio value="Female">
+                  <Text color={useColorModeValue("gray.900", "whiteAlpha.900")}>Female</Text>
+                  </Radio>
                 </Flex>
               </RadioGroup>
             </ModalBody>
